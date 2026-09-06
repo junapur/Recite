@@ -1,0 +1,20 @@
+{
+  "languages": {
+    "Python": {
+      "language_servers": ["pyrefly", "ruff"],
+      "format_on_save": "on",
+      "formatter": [
+        { "code_action": "source.fixAll.ruff" },
+        { "code_action": "source.fixAll.pyrefly" },
+      ],
+    },
+  },
+  "lsp": {
+    "pyrefly": {
+      "binary": {
+        "path": ".venv/Scripts/pyrefly.exe",
+        "arguments": ["lsp"],
+      },
+    },
+  },
+}

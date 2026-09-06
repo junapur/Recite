@@ -1,0 +1,74 @@
+[project]
+name = "recite"
+version = "0.1.0"
+requires-python = ">=3.14"
+license = "MIT"
+readme = "README.md"
+description = "Lightweight text-to-speech for your terminal"
+authors = [{ name = "June", email = "junapur@proton.me" }]
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/junapur/Recite"
+Issues = "https://github.com/junapur/Recite/issues"
+Changelog = "https://github.com/junapur/Recite/CHANGELOG.md"
+
+[project.scripts]
+recite = "recite:main"
+
+[build-system]
+requires = ["uv_build>=0.12.10,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+nox = ["nox-uv>=0.8.0"]
+lint = ["ruff>=0.16.6"]
+typecheck = ["pyrefly>=1.2.0"]
+
+[tool.uv]
+required-version = ">=0.12.10, <0.13.0"
+default-groups = "all"
+
+[tool.ruff.lint]
+select = [
+    "ASYNC",  # flake8-async
+    "S",      # flake8-bandit
+    "BLE",    # flake8-blind-except
+    "FBT",    # flake8-boolean-trap
+    "B",      # flake8-bugbear
+    "A",      # flake8-builtins
+    "C4",     # flake8-comprehensions
+    "DTZ",    # flake8-datetimez
+    "EM",     # flake8-errmsg
+    "ISC",    # flake8-implicit-str-concat
+    "ICN",    # flake8-import-conventions
+    "LOG",    # flake8-logging
+    "G",      # flake8-logging-format
+    "PIE",    # flake8-pie
+    "PT",     # flake8-pytest-style
+    "RSE",    # flake8-raise
+    "RET",    # flake8-return
+    "SLF",    # flake8-self
+    "SIM",    # flake8-simplify
+    "ARG",    # flake8-unused-arguments
+    "PTH",    # flake8-use-pathlib
+    "I",      # isort
+    "N",      # pep8-naming
+    "E",      # pycodestyle (errors)
+    "F",      # pyflakes
+    "PLE",    # pylint (errors)
+    "PLC",    # pylint (convention)
+    "FURB",   # refurb
+    "RUF",    # ruff-specific rules
+]
+ignore = [
+    # The following rules conflict with Ruff's formatter:
+    "E111",
+    "E114",
+    "E117",
+    "E501",
+]
+
+[tool.pyrefly]
+project-includes = ["**/*.py*"]
+preset = "strict"
