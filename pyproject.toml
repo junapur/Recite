@@ -6,7 +6,9 @@ license = "MIT"
 readme = "README.md"
 description = "Lightweight text-to-speech for your terminal"
 authors = [{ name = "June", email = "junapur@proton.me" }]
-dependencies = []
+dependencies = [
+    "cyclopts>=4.24.0",
+]
 
 [project.urls]
 Repository = "https://github.com/junapur/Recite"
@@ -14,7 +16,7 @@ Issues = "https://github.com/junapur/Recite/issues"
 Changelog = "https://github.com/junapur/Recite/CHANGELOG.md"
 
 [project.scripts]
-recite = "recite:main"
+recite = "recite.cli:app"
 
 [build-system]
 requires = ["uv_build>=0.12.10,<0.13.0"]
