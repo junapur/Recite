@@ -8,6 +8,7 @@ app = cyclopts.App(
     exit_on_error=True,
 )
 
+
 @app.default()
 def main() -> None:
     msg = "Oops, not ready yet! :["
