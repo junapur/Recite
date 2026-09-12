@@ -1,7 +1,7 @@
 {
   "languages": {
     "Python": {
-      "language_servers": ["pyrefly", "ruff"],
+      "language_servers": ["pyrefly", "ruff", "discord"],
       "format_on_save": "on",
       "code_actions_on_format": {
         "source.fixAll.ruff": true,

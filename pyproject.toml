@@ -52,6 +52,8 @@ select = [
     "RET",    # flake8-return
     "SLF",    # flake8-self
     "SIM",    # flake8-simplify
+    "TID",    # flake8-tidy-imports
+    "TC",     # flake8-type-checking
     "ARG",    # flake8-unused-arguments
     "PTH",    # flake8-use-pathlib
     "I",      # isort
