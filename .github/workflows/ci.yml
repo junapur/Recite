@@ -6,7 +6,7 @@ permissions:
   contents: "read"
 
 env:
-  UV_VERSION: "0.12.10"
+  UV_VERSION: "0.12.17"
 
 jobs:
   quality:
