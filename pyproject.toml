@@ -7,7 +7,7 @@ readme = "README.md"
 description = "Lightweight text-to-speech for your terminal"
 authors = [{ name = "June", email = "junapur@proton.me" }]
 dependencies = [
-    "cyclopts>=4.24.0",
+    "cyclopts>=4.25.2",
 ]
 
 [project.urls]
